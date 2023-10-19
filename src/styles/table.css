@@ -1,0 +1,14 @@
+.tabela-pontos {
+    border:1px sólido #C0C0C0;
+    border-collapse:colapso;
+    padding:5px;
+}
+.tabela-pontos th {
+    border:1px sólido #C0C0C0;
+    padding:5px;
+    background:#F0F0F0;
+}
+.tabela-pontos td {
+    border:1px sólido #C0C0C0;
+    padding:5px;
+}
