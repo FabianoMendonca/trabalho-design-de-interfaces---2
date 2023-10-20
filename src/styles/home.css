@@ -1,7 +1,9 @@
 html, body, body main{
     height: 100%;
-    background: rgb(38,38,38);
-    background: radial-gradient(circle, rgba(38,38,38,0.1540265764508929) 0%, rgba(255,255,255,0.5153711142660189) 61%, rgba(164,164,164,0.6498248957786239) 100%);    
+    background-image: url("../img/1000_F_82737578_qWZq9U6176jAlDkJxknfd3RvM2SmXLVE.jpg");
+    background-size: cover;
+    /* background: rgb(38,38,38); */
+    /* background: radial-gradient(circle, rgba(38,38,38,0.1540265764508929) 0%, rgba(255,255,255,0.5153711142660189) 61%, rgba(164,164,164,0.6498248957786239) 100%);     */
 }
 
 #main-content{
