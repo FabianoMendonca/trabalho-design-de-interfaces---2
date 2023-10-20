@@ -38,7 +38,7 @@ submitButton.addEventListener('click', (e) =>{
     let submitButtonTeamForm = document.createElement('button');
     submitButtonTeamForm.classList.add('btn', 'btn-dark')    
     submitButtonTeamForm.appendChild(document.createTextNode('Submit'));
-    submitButtonTeamForm.addEventListener('submit', (event)=>{
+    submitButtonTeamForm.addEventListener('click', (event)=>{
         let teamListName = []
         let champ = new championship(champN.value);
         for (let index = 0; index < champN.value; index++) {

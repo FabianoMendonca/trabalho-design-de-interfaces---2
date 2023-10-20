@@ -25,7 +25,7 @@ import championship from "./script/championship.js"
 let currentchamp = localStorage.getItem('selected-champ');
 let champList = localStorage.getItem('champList');
 if(currentchamp == null){
-    localStorage.setItem('selected-chap', '');
+    localStorage.setItem('selected-champ', '');
 }
 if(champList == null){
     let champListTemp = {champ:[]}
