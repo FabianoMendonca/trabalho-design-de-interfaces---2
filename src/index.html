@@ -9,28 +9,35 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./styles/table.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
     <title>Document</title>
   </head>
   <body>
     <main id="teams-list">
-      <ul class="nav justify-content-center ">
-        <li class="nav-item">
-          <a class="nav-link" href="./index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./html/table.html">Criar Campeonato</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./html/table.html">Ver Jogos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./html/table.html">Tabela</a>
-        </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li> -->
-      </ul>
+        <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body fixed-top" data-bs-theme="dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="../src/index.html">Home</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item navbar-brand">
+                      <a class="nav-link" href="./html/criar-campeonato.html">Criar Campeonato</a>
+                    </li>
+                    <li class="nav-item navbar-brand">
+                      <a class="nav-link" href="./html/games.html">Ver Jogos</a>
+                    </li>
+                    <li class="nav-item navbar-brand">
+                      <a class="nav-link" href="./html/table.html">Tabela</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li> -->
+                  </ul>
+              </div>
+            </div>
+          </nav>
     </main>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

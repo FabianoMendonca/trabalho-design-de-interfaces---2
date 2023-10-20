@@ -53,7 +53,7 @@ export default class championship {
     }
     get createChampionship(){
         try {
-            console.log(this.maxOfTeams)
+            // console.log(this.maxOfTeams)
             for (let i = 0; i < this.maxOfTeams - 1 ; i++) {
                 // console.log(i)
                 for(let j = i+1; j < this.maxOfTeams; j++){ 
@@ -67,13 +67,17 @@ export default class championship {
     }
     set loadChampionship(championshipName){
         let champ = JSON.parse(localStorage.getItem(championshipName));
-        this.games = JSON.parse(champ['games'])
-        this.teams = JSON.parse(champ['teams'])
-        this.maxOfTeams = Number(champ['maxOfTeams'])
+        this.games = JSON.parse(champ['games']);
+        this.teams = JSON.parse(champ['teams']);
+        this.maxOfTeams = Number(champ['maxOfTeams']);
+        this.championshipTable;
     }
     get championshipTable(){
         this.teams.forEach((team) =>{
             team.points = 0;
+            team.win = 0;
+            team.lose = 0;
+            team.draw = 0;
         })
         this.games.forEach((element)=>{
             if(element.winner == 'draw'){

@@ -1,22 +1,24 @@
 html, body, body main{
-    height: 100%;
+    height: 100vh;
     background: rgb(38,38,38);
     background: radial-gradient(circle, rgba(38,38,38,0.1540265764508929) 0%, rgba(255,255,255,0.5153711142660189) 61%, rgba(164,164,164,0.6498248957786239) 100%);    
 }
  .container{
     height: 80%;
+    width: 100%;
 }
-.tabela-pontos {
+
+.tabela-jogos {
     border:1px sólido #C0C0C0;
     border-collapse:colapso;
     padding:5px;
 }
-.tabela-pontos th {
+.tabela-jogos th {
     border:1px sólido #C0C0C0;
     padding:5px;
     background:#F0F0F0;
 }
-.tabela-pontos td {
+.tabela-jogos td {
     border:1px sólido #C0C0C0;
     padding:5px;
 }

@@ -1,0 +1,22 @@
+body, body main{
+    height: 100vh;
+    background: rgb(38,38,38);
+    background: radial-gradient(circle, rgba(38,38,38,0.1540265764508929) 0%, rgba(255,255,255,0.5153711142660189) 61%, rgba(164,164,164,0.6498248957786239) 100%);    
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ .main{
+    height: 80vh;
+}
+
+
+@media (width > 1200px) {
+    #main-container{
+        margin-top: 57px;
+    }
+}
+@media (width > 770px) and (width < 990) {
+    #main-container{
+        padding-top: 250px;;
+    }
+}
