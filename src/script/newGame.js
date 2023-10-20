@@ -3,8 +3,8 @@ import championship from '../script/championship.js';
 const submitButton = document.querySelector('#submit-button');
 
 submitButton.addEventListener('click', (e) =>{
-    let champName = document.querySelector('#inputName');
-    let champN = document.querySelector('#inputJogadores');
+    let champName = document.querySelector('#inputName').value;
+    let champN = document.querySelector('#inputJogadores').value;
     let form = document.createElement('form');
     let main = document.querySelector('.main');
     
@@ -12,7 +12,7 @@ submitButton.addEventListener('click', (e) =>{
     
     let div = document.createElement('div');
     div.classList.add('d-flex', 'justify-content-start', 'align-items-center', 'flex-row', 'flex-wrap');
-    for (let index = 0; index < champN.value; index++) {
+    for (let index = 0; index < champN; index++) {
         `<div class="d-flex justify-content-center align-items-center flex-row p-4 gap-2">
             <label for="inputPassword6" class="col-form-label">Jogador1</label>
             <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
@@ -40,20 +40,20 @@ submitButton.addEventListener('click', (e) =>{
     submitButtonTeamForm.appendChild(document.createTextNode('Submit'));
     submitButtonTeamForm.addEventListener('click', (event)=>{
         let teamListName = []
-        let champ = new championship(champN.value);
-        for (let index = 0; index < champN.value; index++) {
+        let champ = new championship(champN);
+        for (let index = 0; index < champN; index++) {
             teamListName.push(document.querySelector(`#inputPlayer${index}`).value);
         }
         teamListName.forEach((nome) =>{
             champ.setTeam = nome;
         })
         console.log(champ)
-        localStorage.setItem("selected-champ", champName.value);
+        localStorage.setItem("selected-champ", champName);
         let templist = JSON.parse(localStorage.getItem('champList'))
-        templist.champ.push(champName.value);
+        templist.champ.push(champName);
         localStorage.setItem('champList', JSON.stringify(templist))
         champ.createChampionship;
-        champ.saveChampionship = champName.value;
+        champ.saveChampionship = champName;
         event.preventDefault();
     })
 
