@@ -3,3 +3,8 @@ html, body, body main{
     background: rgb(38,38,38);
     background: radial-gradient(circle, rgba(38,38,38,0.1540265764508929) 0%, rgba(255,255,255,0.5153711142660189) 61%, rgba(164,164,164,0.6498248957786239) 100%);    
 }
+
+#main-content{
+    height: 100vh;
+    width: 80vw;
+}

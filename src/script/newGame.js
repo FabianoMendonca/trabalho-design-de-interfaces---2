@@ -54,6 +54,7 @@ submitButton.addEventListener('click', (e) =>{
         localStorage.setItem('champList', JSON.stringify(templist))
         champ.createChampionship;
         champ.saveChampionship = champName;
+        window.location.href = './table.html'
         event.preventDefault();
     })
 
