@@ -3,7 +3,7 @@ import championship from "../script/championship.js"
 let champs = new championship();
 let currentChamponshipName = localStorage.getItem("selected-champ");
 
-if(currentChamponshipName == null){
+if(currentChamponshipName == null || currentChamponshipName == ''){
     let mainContent = document.querySelector("#main-content");
     // let tableGames = document.querySelector("#tabela-1-jogos");
     const node = document.getElementById("tabela-1-jogos");
@@ -12,9 +12,13 @@ if(currentChamponshipName == null){
     }
     let span = document.createElement('span').appendChild(
         document.createTextNode(`Nenhum campeonato selecionado`)
-    )
-    mainContent.appendChild(span);
+        )
+        mainContent.appendChild(span);
 }else{
+    let mainContent = document.querySelector("#main-content");
+    if(mainContent.parentNode){
+        mainContent.parentNode.removeChild(mainContent)
+    }
     champs.loadChampionship = currentChamponshipName;
     const tabelaPontos = document.querySelector("#tabela-pontos");
     champs.teams.forEach((team) =>{

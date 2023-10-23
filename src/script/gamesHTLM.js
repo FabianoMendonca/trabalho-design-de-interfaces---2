@@ -4,10 +4,10 @@ import championship from "../script/championship.js"
 let champ = new championship();
 let currentChamponshipName = localStorage.getItem("selected-champ");
 
-if(currentChamponshipName == null){
+if(currentChamponshipName == null || currentChamponshipName==''){
     let mainContent = document.querySelector("#main-content");
     // let tableGames = document.querySelector("#tabela-1-jogos");
-    const node = document.getElementById("tabela-1-jogos");
+    const node = document.getElementById("tabela-games-id");
     if (node.parentNode) {
         node.parentNode.removeChild(node);
     }
@@ -16,6 +16,10 @@ if(currentChamponshipName == null){
     )
     mainContent.appendChild(span);
 }else{
+    let mainContent = document.querySelector("#main-content");
+    if(mainContent.parentNode){
+        mainContent.parentNode.removeChild(mainContent)
+    }
     champ.loadChampionship = currentChamponshipName;
     const tabelaPontos = document.querySelector("#tabela-jogos");
     champ.games.forEach((game) =>{
